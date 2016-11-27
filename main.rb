@@ -3,14 +3,14 @@ require 'discordrb'
 bot = Discordrb::Commands::CommandBot.new token: 'no u:tm:', client_id: 219545310693687296, prefix: '$', log_mode: :info
 
 
-bot.command(:exit, help_available: false) do |event|
+bot.command(:exit, help_available: "Shuts down the bot.") do |event|
   break unless event.user.id == 117678528220233731
                                                                                                                          
   bot.send_message(event.channel.id, 'See ya soon.')
   exit                                                                                                                   
 end
 
-bot.command(:eval, help_available: false) do |event, *code|
+bot.command(:eval, help_available: "evaluates code in ruby m9") do |event, *code|
   break unless event.user.id == 117678528220233731
                                                                                                                          
   begin
@@ -20,7 +20,7 @@ bot.command(:eval, help_available: false) do |event, *code|
   end
 end
 
-bot.command(:setgame) do |event, *game|
+bot.command(:setgame, help_available: "sets the bot status.") do |event, *game|
   break unless event.user.id == 117678528220233731
   g = "#{game.join(' ')}"
   
@@ -33,7 +33,7 @@ this is the bee movie meme.
 please remove.
 =end
 
-bot.command(:memeify) do |event|
+bot.command(:memeify, help_available: false) do |event|
 	event << """According to all known laws
 of aviation,
 
