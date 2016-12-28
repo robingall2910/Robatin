@@ -1,6 +1,6 @@
 require 'discordrb'
 require 'time_diff'
-
+#kill me daddy -Seth
 bot = Discordrb::Commands::CommandBot.new token: 'no u', client_id: 219545310693687296, prefix: '$', log_mode: :info
 
 bot.ready do
