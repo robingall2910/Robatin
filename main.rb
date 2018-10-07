@@ -120,3 +120,5 @@ bot.command :manga do |event, *args|
 end
 
 bot.run
+
+g
